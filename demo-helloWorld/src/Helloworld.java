@@ -9,6 +9,8 @@ public class Helloworld {
     System.out.println("Helloworld?????");
     System.out.println("Hello world.");
     System.out.println("How are you today.");
-
+    System.out.println("Helloworld!!! 係呀");
+    System.out.println("好多嘢。");
+    System.out.println("如果。");
   }
 }
