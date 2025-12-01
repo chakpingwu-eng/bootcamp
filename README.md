@@ -5,5 +5,5 @@
 ## Week 1
 - Software Installion
 - Hello World
-  - abc
--On my god
+- abc
+- Sa Yo Ra Ra
