@@ -5,4 +5,4 @@
 ## Week 1
 - Software Installion
 - Hello World
-- abc-
+  - abc
