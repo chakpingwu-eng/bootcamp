@@ -2,6 +2,6 @@
 # head1
 ## head2
 
-##week 1
+Week 1
 - Software Installion
 - Hello World
