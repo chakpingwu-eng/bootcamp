@@ -7,3 +7,7 @@
   - Hello World
 - abc
   - Sa Yo Ra Ra
+- git clone SSH.
+- git add .
+- git commit -m "修改訊息"
+- git push
