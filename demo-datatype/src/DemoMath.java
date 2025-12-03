@@ -5,23 +5,25 @@ public class DemoMath {
     int remainder = 10 % 3;
     // % -> The remainder of division 找餘數
 
-    System.out.println(remainder);
+    //System.out.println(remainder);
 
     remainder = 99 % 7;
 
-    System.out.println(remainder);
+    System.out.println("算式 : 99 % 7 = " + remainder );
 
     int a = 7;
-    System.out.println(a + 9); //16
+  /*
+    System.out.println(a + 9); // 16
     System.out.println(a - 3); // 4
     System.out.println(a * 7); // 49
-    System.out.println(a / 7); //1
+    System.out.println(a / 7); // 1
+  */
 
 
     //Step 1: a + 10 ->17(int + int -> int value)
     //Step 2: Assign int value (17) into int box
     a = a + 10;
-    System.out.println(a); // 17
+    System.out.println("定義 int a = 7, 算式: a = a +10 出現的答案是" + a); // 17
 
     //Step 1: int + double
     

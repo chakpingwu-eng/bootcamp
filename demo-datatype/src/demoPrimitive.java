@@ -104,5 +104,9 @@ public class demoPrimitive {
     j = 10;
 
     System.out.println(j);
+
+    char c2 = ' ';// OK
+
+
   }
 }
