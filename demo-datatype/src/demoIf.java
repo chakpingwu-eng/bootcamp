@@ -7,7 +7,6 @@ if(x % 2 == 1){
 
   System.out.println("this is an odd number");
 
-
 }else{
 
   System.out.println("this is an even number");
