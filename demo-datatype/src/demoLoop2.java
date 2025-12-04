@@ -23,12 +23,12 @@ public class demoLoop2 {
 
     //principal = 1000.0, interest 3% per year, calculate the total amount after 3 years
 
-    double principal = 1000.0, interest = 0.03, growth_factor;
+    double principal = 1000.0, interestRate = 0.03, growth_factor;
     int year = 3;
 
     for(int i = 0; i < year; i++ ){
 
-      growth_factor = 1 + interest;
+      growth_factor = 1 + interestRate;
 
       principal *=  growth_factor;
       
@@ -47,8 +47,6 @@ public class demoLoop2 {
                 evenNum += i;
             }
 
-            
-      
     }
     productNum = oddNum * evenNum;
     System.out.println("The odd numbers is " + oddNum);
@@ -80,7 +78,7 @@ public class demoLoop2 {
       }
     }
 
-    System.out.println(count);
+    System.out.println("the number of l = " + count);
 
     //"Hello", count the number of capitial letter (upper case letter)
 
@@ -88,15 +86,12 @@ public class demoLoop2 {
     count = 0;
 
     for(int i = 0; i < name.length(); i++){
-
+    //if(name.charAt(i) >= 'A' && name.charAt(i) <= 'Z') //Other method
       if(Character.isUpperCase(name.charAt(i))){
-
         count++;
-
         }
       }
-
-      System.out.println("Hello, count the number of capitial letter (upper case letter) :" +count);
+      System.out.println("Hello, the number of capitial letter (upper case letter) :" +count);
 
     //print 1 4 9 16 25 ... 100
 
@@ -111,23 +106,77 @@ public class demoLoop2 {
 
         }
       }
-
       System.out.println();
 
-      
+      /*for(int i = 1 ; i <= 10; i++){
+
+        System.out.println( i*i);
+
+      }*/
+
     //given a string "apple", count the number of character a, e, i, o ,u
 
     name = "apple";
+    char charA = 'a', charE = 'e', charI = 'i', charO = 'o', charU = 'u';
+    int numCharA = 0, numCharE = 0, numCharI = 0, numCharO = 0, numCharU = 0;
 
     for(int i = 0; i <name.length(); i++){
 
-      
-
+      if(name.charAt(i) == charA){numCharA++;}
+      if(name.charAt(i) == charE){numCharE++;}
+      if(name.charAt(i) == charI){numCharI++;}
+      if(name.charAt(i) == charO){numCharO++;}
+      if(name.charAt(i) == charU){numCharU++;}
+      System.out.println(name.charAt(i));
     }
+    System.out.println("the number of character a + " + numCharA);
+    System.out.println("the number of character e + " + numCharE);
+    System.out.println("the number of character i + " + numCharI);
+    System.out.println("the number of character o + " + numCharO);
+    System.out.println("the number of character u + " + numCharU);
 
     //given a string "hello", print "hello", "hell", "hel", "he", "h"
 
+    name = "hello";
+    for(int i = 0; i <name.length(); i++){
+
+      System.out.println(name.substring(0, name.length() - i)); //1st round substring(0, 5 - 0 -1)
+
+    }
+
+
     //Given Passward = "abcd@1234XYZ"
+
+    String password = "abcd@1234XYZ";
+    boolean isLengthValid = password.length() >= 12;
+    boolean withCapitialLetter = false, withSpecialChar = false;
+
+
+    for(int i = 0; i < password.length(); i++){
+
+      if(password.charAt(i) >= 'A' && password.charAt(i) <= 'Z'){
+
+        withCapitialLetter = true;
+      }
+
+      if(password.charAt(i) == '@' || password.charAt(i) == '#' ||
+         password.charAt(i) == '$' || password.charAt(i) == '!' ){
+
+          withSpecialChar = true;
+
+         }
+
+      if(withCapitialLetter && withSpecialChar)
+        
+      {
+        break;
+      }
+
+    }
+
+    boolean isPasswordValid = isLengthValid && withCapitialLetter && withSpecialChar;
+    System.out.println("Is Password Valid? " + isPasswordValid);
+
 
     //Check if the password is valid. Result is boolean.
 
@@ -138,7 +187,10 @@ public class demoLoop2 {
     //Given a string s1 = "abc5uk20fs", move all numbers to another string.
     //s1 = "abc5uk20fs" -> s2 = 520
 
+
+
     //Encrypt Password. "abcd" -> Alogorithm: ASCII + 3 -> "defg"
+
 
 
 

@@ -33,15 +33,15 @@ public class demoLoop {
     //Step 14: i < 4 ? No -> exit loop
 
      // print 50 hello
-    /*for(int i = 0; i < 50; i++){ // 0-49
+    for(int i = 0; i < 50; i++){ // 0-49
 
       System.out.println("hello");
 
-    }*/
+    }
 
     //0 - 100 
 
-    /*for(int i = 0; i < 101 ; i++){ // 0-100
+    for(int i = 0; i < 101 ; i++){ // 0-100
 
       if(i % 2 == 0){
 
@@ -49,12 +49,12 @@ public class demoLoop {
 
       }
       
-    }*/
+    }
 
     //0-20 
     //print odd numbers and number > 5
 
-    /*for(int i = 0; i <= 20; i++){
+    for(int i = 0; i <= 20; i++){
 
       if(i > 5 &&i % 2==1){
 
@@ -62,7 +62,7 @@ public class demoLoop {
 
       }
 
-    }*/
+    }
 
     // leap year
     // divided by 100, not a leap year, unless divided by 400 (i.e. 2000 is a leap year)
@@ -123,7 +123,146 @@ public class demoLoop {
     }
     System.out.println(result);
     
-      
+
+
+    //! break
+
+    //the first number between 1 - 50, which is divided by 7.
+
+    int target = -1;
+    for(int i = 1; i <= 50; i++) {
+      if (i % 7 == 0) {
+        target = i;
+        break; //break loop
+      }
+    }
+    if(target == -1){
+        System.out.println("Not Found");
+      }else{
+        System.out.println("Target= " + target);
+      }
+
+
+    //! continue -> skip the rest
+    for(int i = 0; i < 20; i++){
+
+      if(i % 2 == 0){
+
+        System.out.println("Hello");
+        
+      }
+      continue; //goes to modifier(i++)
+    }
+    System.out.println("Goodbye!!");
+
+    //1000 lines
+
+    for(int i = 0; i <20; i++){
+
+      if(i % 2 ==0){
+
+        System.out.println("Hello!!");
+      }else{
+
+        System.out.println("Hello!!");
+        System.out.println("Goodbye!!");
+
+      }
+    }
+
+    //Find the largest number < 1000, divided by 7
+    target = 0;
+
+    for(int i = 0; i < 1000; i+= 7){
+
+      if(i % 7 ==0){
+
+        target =i;
+
+      }
+
+    }
+
+    System.out.println(target);
+    
+    int largestNumber = 0;
+
+    while (true) {
+      if(largestNumber + 7 >= 1000){
+
+        break;
+      }
+      largestNumber += 7;
+    }
+
+    System.out.println("The largestNumber is " +largestNumber);
+
+    String currentTime = "23:42:00";
+    int secondToAdd = 6500;
+    int currentHour = (currentTime.charAt(0)- '0') * 10 +(currentTime.charAt(1) -'0');
+    System.out.println(currentHour);
+    int currentMinute = (currentTime.charAt(3)- '0') * 10 +(currentTime.charAt(4) -'0');
+    System.out.println(currentMinute);
+    int currentSecond = (currentTime.charAt(6)- '0') * 10 +(currentTime.charAt(7) -'0');
+    System.out.println(currentSecond);
+    int currentTimeInSecond = currentHour *60 *60 + currentMinute *60+currentSecond;
+
+    int todayTotalSecond = (currentTimeInSecond + secondToAdd) % (24 * 60 * 60);
+    System.out.println("Show total " + todayTotalSecond); //5420
+
+    int todayHour = todayTotalSecond / (60 *60); //prefix 0
+    int todayMinute = todayTotalSecond % (60*60) / 60; //prefix 0
+    int todaySecond = todayTotalSecond % (60*60) % 60;
+
+    String todayHourInString = (todayHour < 10 ? "0": "") + todayHour;
+    String todayMinuteInString = (todayMinute < 10 ? "0": "") + todayMinute;
+    String todaySecondInString = (todaySecond <10 ? "0" : "") + todaySecond;
+
+    String todayTime = todayHourInString + ":" + todayMinuteInString + ":" + todaySecondInString;
+
+    System.out.println(todayTime);
+
+    int n = 9;
+    target = n;
+
+    //Find the index of 'X', -1 if not Found.
+    //i.e. Use loop, not indexOf()
+
+    String inputString = "index";
+        char targetChar = 'x';
+        int foundIndex = 0;
+
+        for (int i = 0; i <= inputString.length(); i++) {
+            if (inputString.charAt(i) == targetChar) {
+                foundIndex = i +1;
+                break;
+            }
+        }
+        System.out.println("在 \"" + inputString + "\" 中，'" + targetChar + "' 的索引是: " + foundIndex);
+    
+        //out loop
+        for(int i = 0; i < 3 ;i++ ){
+        //inner loop
+          for(int j = 0; j < 3; j++){
+
+            System.out.println("i =" + i +", j=" + j);
+          }
+
+          // *
+          // **
+          // ***
+          // ****
+        }
+
+        int n1 = 4;
+        
+        for (int i = 1; i <= n1; i++) {        // 外層：控制第幾行
+            for (int j = 1; j <= i; j++) {    // 內層：第 i 行印 i 顆星星
+                System.out.print("*");
+            }
+            System.out.println();             // 換行
+        }
+
     //end
   }
 }
