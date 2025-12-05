@@ -1,16 +1,17 @@
 public class demoLoop2 {
   public static void main(String[] args) {
     
+    // print 3 hello
     for(int i = 0; i < 3; i++){
 
       System.out.println("Hello");
 
     }
 
+    // name = "Mary", print every character of the name.
     for(int i = 0; i <= 10; i++){
 
       System.out.println(i);
-
     }
 
     String name = "Mary";
@@ -56,7 +57,7 @@ public class demoLoop2 {
 
     //result -> "1/2/3/4/5"
     for (int i = 1; i <= 5; i++) {
-            System.out.print(i);
+            System.out.print(i); 
             if (i < 5) {
                 System.out.print("/");
             }
@@ -108,6 +109,7 @@ public class demoLoop2 {
       }
       System.out.println();
 
+      //The Solution of Mr Vincent Lau.
       /*for(int i = 1 ; i <= 10; i++){
 
         System.out.println( i*i);
@@ -127,7 +129,7 @@ public class demoLoop2 {
       if(name.charAt(i) == charI){numCharI++;}
       if(name.charAt(i) == charO){numCharO++;}
       if(name.charAt(i) == charU){numCharU++;}
-      System.out.println(name.charAt(i));
+    System.out.println(name.charAt(i));
     }
     System.out.println("the number of character a + " + numCharA);
     System.out.println("the number of character e + " + numCharE);
@@ -160,7 +162,8 @@ public class demoLoop2 {
       }
 
       if(password.charAt(i) == '@' || password.charAt(i) == '#' ||
-         password.charAt(i) == '$' || password.charAt(i) == '!' ){
+         password.charAt(i) == '$' || password.charAt(i) == '!' ||
+         password.charAt(i) == '.'){
 
           withSpecialChar = true;
 
@@ -186,12 +189,24 @@ public class demoLoop2 {
 
     //Given a string s1 = "abc5uk20fs", move all numbers to another string.
     //s1 = "abc5uk20fs" -> s2 = 520
-
+    String s5 = "abc5uk20fs";
+    String newString = "";
+    for (int i = 0; i < s5.length(); i++) {
+      if (s5.charAt(i) >= '0' && s5.charAt(i) <= '9') {
+        newString += s5.charAt(i);
+      }
+    }
+    System.out.println(newString);
 
 
     //Encrypt Password. "abcd" -> Alogorithm: ASCII + 3 -> "defg"
-
-
+    System.out.println('a' + 3); // char + int -> int
+    String origPassword = "abcd";
+    String encryptedPassword = "";
+    for (int i = 0; i < origPassword.length(); i++) {
+      encryptedPassword += (char) (origPassword.charAt(i) + 3);
+    }
+    System.out.println("Encrypted Password=" + encryptedPassword);
 
 
 
