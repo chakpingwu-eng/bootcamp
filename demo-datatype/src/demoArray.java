@@ -75,7 +75,7 @@ public class demoArray {
   }
 
   //"John", "Tommy", "Steven"
-  String names = new String() 
+  String[] names = new String[]{"John", "Tommy", "Steven"};
 
 }
 

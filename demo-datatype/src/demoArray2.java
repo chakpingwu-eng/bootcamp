@@ -92,7 +92,6 @@ public class demoArray2 {
           scores[j +1] =backup;
 
         }
-
       }
     }
 
