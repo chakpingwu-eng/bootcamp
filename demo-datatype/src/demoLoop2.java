@@ -120,7 +120,7 @@ public class demoLoop2 {
 
     name = "apple";
     char charA = 'a', charE = 'e', charI = 'i', charO = 'o', charU = 'u';
-    int numCharA = 0, numCharE = 0, numCharI = 0, numCharO = 0, numCharU = 0;
+    int numCharA = 0, numCharE = 0, numCharI = 0, numCharO = 0, numCharU = 0, TotalCount = 0;
 
     for(int i = 0; i <name.length(); i++){
 
@@ -131,11 +131,14 @@ public class demoLoop2 {
       if(name.charAt(i) == charU){numCharU++;}
     System.out.println(name.charAt(i));
     }
-    System.out.println("the number of character a + " + numCharA);
-    System.out.println("the number of character e + " + numCharE);
-    System.out.println("the number of character i + " + numCharI);
-    System.out.println("the number of character o + " + numCharO);
-    System.out.println("the number of character u + " + numCharU);
+
+    TotalCount =  numCharA + numCharE + numCharI + numCharO + numCharU;
+    System.out.println("the number of character a " + numCharA);
+    System.out.println("the number of character e " + numCharE);
+    System.out.println("the number of character i " + numCharI);
+    System.out.println("the number of character o " + numCharO);
+    System.out.println("the number of character u " + numCharU);
+    System.out.println("the number of character aeiou is " + TotalCount);
 
     //given a string "hello", print "hello", "hell", "hel", "he", "h"
 
@@ -207,7 +210,6 @@ public class demoLoop2 {
       encryptedPassword += (char) (origPassword.charAt(i) + 3);
     }
     System.out.println("Encrypted Password=" + encryptedPassword);
-
 
 
     //end

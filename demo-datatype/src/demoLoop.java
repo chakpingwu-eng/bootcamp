@@ -240,12 +240,33 @@ public class demoLoop {
         }
         System.out.println("在 \"" + inputString + "\" 中，'" + targetChar + "' 的索引是: " + foundIndex);
     
+        //check if the number is prime
+        int number = 47;
+        boolean isPrime = true;
+
+        for(int i = 2; i < number ; i++){
+
+          if(number % i == 0){
+            isPrime = false;
+             break;
+            }
+        }
+
+        if(isPrime){
+          System.out.println("The number " + number + "is a prime.");
+        }
+        else{
+          System.out.println("The number " + number + "is not a prime.");
+        }
+
+
         //out loop
         for(int i = 0; i < 3 ;i++ ){
         //inner loop
           for(int j = 0; j < 3; j++){
 
             System.out.println("i =" + i +", j=" + j);
+
           }
 
           // *
@@ -256,11 +277,11 @@ public class demoLoop {
 
         int n1 = 4;
         
-        for (int i = 1; i <= n1; i++) {        // 外層：控制第幾行
-            for (int j = 1; j <= i; j++) {    // 內層：第 i 行印 i 顆星星
+        for (int i = 0; i < n1; i++) {        // 外層：控制第幾行
+            for (int j = 0; j < i + 1; j++) {    // 內層：第 i 行印 i 顆星星
                 System.out.print("*");
             }
-            System.out.println();             // 換行
+            System.out.println("");             // 換行
         }
 
     //end
