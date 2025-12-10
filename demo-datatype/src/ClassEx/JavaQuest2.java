@@ -49,56 +49,39 @@ public class JavaQuest2 {
     // < 5 years → 5% bonus
     // Also, if salary > 100000, reduce bonus by half
 
-    double salary = 100000;
-    int experience = 4;
-    double bonus = 1000;
+    double salary = 110_000;
+    int experience = 12;
+    double bonus = 0, bonusAmount = 0;
+    
+    if(experience >= 10 ){
 
-    if(!(salary >= 100000)){
+      bonus = 1 + 0.2;
+      System.out.println("get bonus " + bonus);
 
-      System.out.println("get more bonus");
+    }else if(experience >= 5 && experience <=9){
 
-      if(experience >= 10){
+      bonus = 1 + 0.1;
+      System.out.println("get bonus " + bonus);
 
-        salary = bonus * (1+0.2);
+    }else if (experience < 5){
 
-        System.out.println("20% bonus");
-        System.out.println(salary *( 1 + 0.2 ));
-
-      }else if(experience >= 5 && experience <= 9){
-
-        System.out.println("10% bonus");
-        System.out.println(salary *( 1 + 0.1 ));
-      }else if(experience <= 5){
-
-        System.out.println("5% bonus");
-        System.out.println(salary *( 1 + 0.05 ));
-
-      }
-      
-    }else{
-
-      System.out.println("reduce bonus by half");
-      
-      if(experience >= 10){
-
-
-        System.out.println("20% bonus");
-        System.out.println(salary *(( 1 + 0.2 )/2));
-
-      }else if(experience >= 5 && experience <= 9){
-
-        System.out.println("10% bonus");
-        System.out.println(salary *((1 + 0.1)/2));
-      }else if(experience <= 5){
-
-        System.out.println("5% bonus");
-        System.out.println(salary *((1 + 0.05)/2));
-
-      }
+      bonus = 1 + 0.05;
+      System.out.println("Get bonus " + bonus);
+    
     }
 
-}
+    if (salary > 100000) {
+      
+      bonus = bonus / 2;
+      salary = salary * bonus;
+      System.out.println("Over 100000, the bonus with salary is " + salary);
 
-}
+    }else{
 
+      System.out.println("Salary is " + bonusAmount);
+
+    }
+
+  }
+}
 
