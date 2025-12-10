@@ -95,6 +95,8 @@ public class JavaQuest3 {
     // prints "venturenixlab, java"
     // code here ...
 
+    System.out.println(str.toUpperCase());
+    System.out.println(str.toLowerCase());
     
 
 
