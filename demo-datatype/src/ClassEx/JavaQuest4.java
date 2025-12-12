@@ -18,7 +18,7 @@ public class JavaQuest4 {
         if (i % 3 == 0 && i > 0 && i % 2 ==0) {
 
           divided_three++;
-          System.out.println(i);
+          System.out.print(i + " ");
           if(divided_three == 10){
             break;
           }
