@@ -14,12 +14,11 @@ public class JavaQuest7 {
     // Write a loop to sum up all value in the int array
     // code here ...
 
-    for(int i =0; i < a.length; i++){
+    for (int i = 0; i < a.length; i++) {
 
+      sum = a[i] + sum;
 
-      if()
     }
-
     System.out.println("The sum is " + sum);
 
   }
