@@ -2,7 +2,6 @@ package Exercise;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 public class DataStructureExercise {
   // Exercise 1: Array List Basic Operations
@@ -166,11 +165,82 @@ public class DataStructureExercise {
     System.out.println("Ex7. This is HashSet: " + exQuest7);
     ArrayList<String> arrayList_exQuest7 = new ArrayList<>(exQuest7);
     System.out.println("Ex7. Convert to an ArrayList: " + arrayList_exQuest7);
-    System.out.println("Is the ArrayList is HashSet? "+arrayList_exQuest7.equals(exQuest7));
+    System.out.println("Ex7. Is the ArrayList is HashSet? "
+        + arrayList_exQuest7.equals(exQuest7));
     System.out.println();
+
+    // Exercise 8: ArrayList of Students
+    // 8a. Create an ArrayList to store Student objects.
+    // Add the following students:
+    // ID: 1, Name: Alice
+    // ID: 2, Name: Bob
+    // ID: 3, Name: Charlie
+    // 8b. Iterate over the ArrayList and print each student's details.
+    // 8c. Remove the student Bob.
+    // 8d. Write a static method to search for a student by ID and return their name. If the student is
+    // not found,
+    // return "Student not found".
+    // 8e. Create another ArrayList to store student with name starts with 'A'
+
+    System.out.println("Exercise 8: ArrayList of Students");
+    ArrayList<Ex_Students> exQuest8 = new ArrayList<>();
+    exQuest8.add(new Ex_Students("Alice", 1));
+    exQuest8.add(new Ex_Students("Bob", 2));
+    exQuest8.add(new Ex_Students("Charlie", 3));
+
+    System.out.println("Ex8b. Student's details: " + exQuest8.toString());
+    exQuest8.remove((int) 1);
+    System.out.println("Ex8c. Remove the student Bob: " + exQuest8.toString());
+    System.out.println("Use static method: " + searchId(exQuest8, 3));
+
+    ArrayList<Ex_Students> studentsWithA = new ArrayList<>();
+    for (Ex_Students s : exQuest8) {
+      if (s.getNames().startsWith("A")) {
+        studentsWithA.add(s);
+      }
+    }
+
+    System.out.println(studentsWithA);
+
+    // Exercise 9: HashSet of Students
+    // 9a. Create two HashSets of Student objects:
+    // Set 1: Alice (ID: 1), Bob (ID: 2), Charlie (ID: 3)
+    // Set 2: Bob (ID: 2), Charlie (ID: 3), David (ID: 4)
+    // 9b. Find the common students of the two sets
+    // 9c. Print the result.
+
+    System.out.println("Exercise 9: HashSet of Students");
+    HashSet<Ex_Students> exQuest9Set1 = new HashSet<>();
+    exQuest9Set1.add(new Ex_Students("Alice", 1));
+    exQuest9Set1.add(new Ex_Students("Bob", 2));
+    exQuest9Set1.add(new Ex_Students("Charlie", 3));
+
+    System.out.println("Set 1: " + exQuest9Set1.toString());
+
+    HashSet<Ex_Students> exQuest9Set2 = new HashSet<>();
+    exQuest9Set2.add(new Ex_Students("Bob", 2));
+    exQuest9Set2.add(new Ex_Students("Charlie", 3));
+    exQuest9Set2.add(new Ex_Students("David", 4));
+    System.out.println("Set 2: " + exQuest9Set2.toString());
+    System.out.println();
+
+    HashSet<Ex_Students> commonStudents = new HashSet<>(exQuest9Set1);
+    commonStudents.retainAll(exQuest9Set2);
+
+    System.out.println("Find the common students of the two sets.");
+    System.out.println("Common Students: " + commonStudents);
 
   }
 
+  public static String searchId(ArrayList<Ex_Students> list, int id) {
 
+    for (Ex_Students s : list) {
 
+      if (s.getId() == id) {
+
+        return s.getNames();
+      }
+    }
+    return "Student not found";
+  }
 }
